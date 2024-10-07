@@ -8,6 +8,7 @@ export default function Currency() {
     const [baseCurrency, setBaseCurrency] = useState(currentCurrency);
     const [targetCurrency, setTargetCurrency] = useState(currentCurrency);
     const [amount, setAmount] = useState(0);
+
     const baseUrl = 'https://v6.exchangerate-api.com/v6/';
     const apiKey = 'your-api-key';
     let resultObject = document.getElementById('result');
@@ -15,23 +16,19 @@ export default function Currency() {
     const handleBaseCurrencyChange = (event) => {
         setBaseCurrency(event.target.value);
     }
-
     const handleTargetCurrencyChange = (event) => {
         setTargetCurrency(event.target.value);
     }
-
     const handleAmountChange = (event) => {
         setAmount(event.target.value);
     }
 
     const convert = async () => {
-        // https://v6.exchangerate-api.com/v6/YOUR-API-KEY/pair/EUR/GBP
         const url = `${baseUrl}${apiKey}/pair/${baseCurrency}/${targetCurrency}`;
         try {
             const response = await axios.get(url);
             const rate = response.data.conversion_rate;
             const result = amount * rate;
-            const conversion_result = response.data.conversion_result;
             resultObject.value = result;
         } catch (error) {
             console.error(error);

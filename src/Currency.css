@@ -1,0 +1,82 @@
+.currency-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 95vh;
+}
+
+.currency-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: 400;
+}
+
+.select {
+    width: 200px;
+    height: 30px;
+    font-size: medium;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: end;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.convert-button {
+    width: 100px;
+    height: 40px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.clear-button {
+    width: 100px;
+    height: 40px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: rgb(221, 71, 118);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-top: 5px;
+}
+
+input {
+    width: 192px;
+    height: 27px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    color: greenyellow;
+}
+
+@media (min-width: 768px) {
+    .currency-main {
+        flex-direction: row;
+    }
+}
